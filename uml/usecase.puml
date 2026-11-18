@@ -1,0 +1,29 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Гость" as Guest
+actor "Пользователь" as User
+actor "Внешний API" as Api
+
+rectangle "Система LeafLog" {
+  usecase "Регистрация и вход" as UC1
+  usecase "Управление коллекцией растений" as UC2
+  usecase "Автоматический график ухода" as UC3
+  usecase "Ведение дневника и фото" as UC4
+  usecase "Экспорт дневника в PDF" as UC5
+  usecase "Получение email-напоминаний" as UC6
+  usecase "Кэширование справочника" as UC7
+}
+
+Guest --> UC1
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+User --> UC5
+User --> UC6
+
+UC2 ..> UC7 : <<include>>
+Api --> UC7 : <<provides data>>
+@enduml
