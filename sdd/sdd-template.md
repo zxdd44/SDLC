@@ -187,19 +187,19 @@
 
 **Диаграмма вариантов использования (Use-Case Diagram):**
 Отражает взаимодействие актеров (Гость, Пользователь, Внешний API) с основными прецедентами системы (авторизация, управление коллекцией, ведение дневника, экспорт в PDF).
-![Use-Case Diagram LeafLog](uml-pic/usecase.png)
+![Use-Case Diagram LeafLog](../uml-pic/usecase.png)
 
 **Диаграмма активности (Activity Diagram):**
 Моделирует логику обработки задач ухода за растениями (проверка просроченных задач, отметка о выполнении, пересчет даты следующего полива или изменение срока).
-![Activity Diagram LeafLog](uml-pic/activity.png)
+![Activity Diagram LeafLog](../uml-pic/activity.png)
 
 **Диаграмма состояний (State Machine Diagram):**
 Отражает жизненный цикл задачи ухода (состояния: `Запланирована` с вложенными подсостояниями, `Просрочена`, `Выполнена`).
-![State Machine Diagram LeafLog](uml-pic/state.png)
+![State Machine Diagram LeafLog](../uml-pic/state.png)
 
 **Диаграмма последовательности (Sequence Diagram):**
 Детализирует процесс взаимодействия компонентов при выполнении экспорта дневника растения в формат PDF (`REQ-FUNC-013`) с использованием контроллера, сервиса, генератора OpenPDF и базы данных PostgreSQL.
-![Sequence Diagram LeafLog](uml-pic/sequence.png)
+![Sequence Diagram LeafLog](../uml-pic/sequence.png)
 
 ---
 
