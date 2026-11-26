@@ -48,3 +48,4 @@ informed: Заказчик
 ## Дополнительная информация
 * Связанные требования SRS: `REQ-REL-003`, `REQ-COST-001`.
 * Связанные элементы SDD: `004-information`.
+* **Связь классов и таблиц.** Классы предметной области с диаграммы классов отображаются на таблицы схемы `004-information` через Spring Data JPA: композиция соответствует внешнему ключу с каскадным удалением (`Plants.user_id`, `CareTasks.plant_id`, `DiaryEntries.plant_id`, `Photos.entry_id`, `ReminderLog.task_id`), агрегация `Plant` → `Species` соответствует внешнему ключу `species_id` без каскада. Общий `BaseEntity` даёт каждой таблице первичный ключ `id`.
